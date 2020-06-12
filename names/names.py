@@ -35,7 +35,7 @@ causing the Big-O notation to be O(n^2)
 
 """ 
 -- New solution below --
-the new runtime is 0.098 seconds. the new runtime complexity is O(n + n) which reduces to O(n)
+the new runtime is 0.098 seconds. the new runtime complexity is O(n + n + 1) which reduces to O(n)
 """
 binary_search_tree = BSTNode("")
 

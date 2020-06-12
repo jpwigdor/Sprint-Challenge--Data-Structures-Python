@@ -40,4 +40,24 @@ class LinkedList:
         return False
 
     def reverse_list(self, node, prev):
-        pass
+        current_node = node
+        # Here, we're just worried about 1)each node as a whole and 2) the node pointer
+
+        # create base-case for recursion
+        while current_node is not None:
+            # create new variable 'next' to be called at the end of the while loop creating a loop.
+            # (the iterator) assign this to look at the next available node.
+            next = current_node.next_node
+
+            # (assign the pointer to the previous node) take the current node and change the `next_node` pointer to be a new variable called `prev`
+            current_node.next_node = prev
+
+            # (reverse the node's position)
+            prev = current_node
+
+            # (the iterator) look back with the iterator to start the process again
+            current_node = next
+
+        # when the loop finally gets to the end, we are now removing the head from it's original node
+        # to point to the NEW start of the list
+        self.head = prev
